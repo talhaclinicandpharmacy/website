@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>رابطہ کریں | Contact Us - Talha Clinic &amp; Pharmacy</title>
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400..700&family=Noto+Naskh+Arabic:wght@400..700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0d2c5c;
+    --navy-dark:#081b3d;
+    --red:#c81e2c;
+    --red-dark:#9c1520;
+    --gold:#f0a52c;
+    --green:#1c8a4e;
+    --bg:#f3f6fb;
+    --paper:#ffffff;
+    --ink:#1b2434;
+    --muted:#5c6b85;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Noto Naskh Arabic','Poppins',sans-serif;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.urdu-head{font-family:'Noto Nastaliq Urdu','Noto Naskh Arabic',serif;font-weight:700;line-height:1.9;}
+  .eng{font-family:'Poppins',sans-serif;}
+  a{text-decoration:none;color:inherit;}
+  img{max-width:100%;display:block;}
+  ul{list-style:none;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 20px;}
+
+  /* ===== TOP BAR ===== */
+  .topbar{background:var(--navy-dark);color:#cfe0ff;font-size:13px;}
+  .topbar .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;padding:6px 20px;}
+  .topbar .info{display:flex;flex-wrap:wrap;gap:18px;align-items:center;}
+  .topbar .info span{display:flex;align-items:center;gap:6px;}
+  .topbar .social{display:flex;gap:10px;}
+  .topbar .social a{width:26px;height:26px;border:1px solid #33507e;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:.25s;}
+  .topbar .social a:hover{background:var(--red);border-color:var(--red);}
+  .topbar svg{width:14px;height:14px;fill:#cfe0ff;}
+
+  /* ===== HEADER ===== */
+  header.main{background:var(--paper);position:sticky;top:0;z-index:50;box-shadow:0 2px 14px rgba(13,44,92,.08);}
+  header.main .wrap{display:flex;align-items:center;justify-content:space-between;padding:9px 20px;gap:16px;}
+  .brand{display:flex;align-items:center;gap:12px;}
+  .brand img{width:58px;height:58px;border-radius:50%;object-fit:cover;border:2px solid var(--navy);}
+  .brand-text .eng-name{font-weight:800;color:var(--navy);font-size:19px;letter-spacing:.3px;}
+  .brand-text .sub{color:var(--red);font-weight:600;font-size:12.5px;letter-spacing:1px;}
+  .call-btn{background:var(--red);color:#fff;font-weight:700;padding:11px 22px;border-radius:40px;display:flex;align-items:center;gap:8px;font-size:15px;box-shadow:0 6px 16px rgba(200,30,44,.35);white-space:nowrap;}
+  .call-btn svg{width:17px;height:17px;fill:#fff;}
+
+  /* ===== HERO ===== */
+  .hero{
+    position:relative;
+    overflow:hidden;
+    line-height:0;
+  }
+  .hero{padding:0;}
+  .hero-banner-wrap{width:100%;margin:0;padding:0;}
+  .hero-banner-img{width:100%;height:auto;display:block;border-radius:0;}
+  .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);padding:6px 16px;border-radius:30px;font-size:12.5px;letter-spacing:.5px;color:var(--gold);font-weight:600;margin-bottom:22px;}
+  .hero h1{font-size:44px;color:#fff;margin-bottom:6px;}
+  .hero h1 span{color:var(--gold);}
+  .hero p.desc{font-family:'Noto Naskh Arabic',serif;font-size:17px;color:#c9d6ee;line-height:2;max-width:520px;margin:14px 0 26px;}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:26px;}
+  .btn{padding:14px 26px;border-radius:10px;font-weight:700;font-size:15px;display:flex;align-items:center;gap:9px;}
+  .btn svg{width:18px;height:18px;}
+  .btn-gold{background:var(--gold);color:var(--navy-dark);box-shadow:0 8px 20px rgba(240,165,44,.35);}
+  .btn-gold svg{fill:var(--navy-dark);}
+  .btn-outline{border:1.5px solid rgba(255,255,255,.5);color:#fff;}
+  .btn-outline svg{fill:#fff;}
+  .timing-strip{display:flex;flex-wrap:wrap;gap:24px;}
+  .timing-strip .item{display:flex;align-items:center;gap:10px;font-size:14px;color:#cfe0ff;}
+  .timing-strip svg{width:20px;height:20px;fill:var(--gold);}
+  .timing-strip b{color:#fff;}
+  .hero-media{position:relative;border-radius:20px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.35);}
+  .hero-media img{width:100%;height:100%;object-fit:cover;}
+  .reg-tag{position:absolute;bottom:0;right:0;left:0;background:rgba(8,27,61,.85);color:#fff;padding:10px 16px;font-size:12px;text-align:center;letter-spacing:.5px;}
+
+  /* ===== SECTION HEAD ===== */
+  .section{padding:70px 0;}
+  .section-head{text-align:center;max-width:640px;margin:0 auto 44px;}
+  .eyebrow{color:var(--red);font-weight:700;font-size:13px;letter-spacing:2px;text-transform:uppercase;font-family:'Poppins',sans-serif;}
+  .section-head h2{font-size:34px;color:var(--navy);margin-top:8px;}
+  .section-head h2 em{font-style:normal;color:var(--red);}
+  .section-head p{color:var(--muted);margin-top:10px;font-size:15px;font-family:'Noto Naskh Arabic',serif;}
+
+  /* ===== TREATMENTS GRID (image cards, same as reference) ===== */
+  .treat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+  .treat-card{background:var(--paper);border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(13,44,92,.08);transition:.3s;position:relative;}
+  .treat-card:hover{transform:translateY(-6px);box-shadow:0 18px 36px rgba(13,44,92,.16);}
+  .treat-card .imgwrap{position:relative;aspect-ratio:16/10;overflow:hidden;}
+  .treat-card .imgwrap img{width:100%;height:100%;object-fit:cover;transition:.4s;}
+  .treat-card:hover .imgwrap img{transform:scale(1.06);}
+  .treat-tag{position:absolute;top:12px;right:12px;background:var(--red);color:#fff;font-size:11px;font-weight:700;padding:5px 12px;border-radius:20px;box-shadow:0 4px 10px rgba(0,0,0,.2);}
+  .treat-body{padding:16px 16px 20px;text-align:center;}
+  .treat-body .u{font-size:16px;color:var(--navy);}
+  .treat-body .e{font-size:11.5px;color:var(--muted);letter-spacing:.5px;text-transform:uppercase;margin-top:4px;font-family:'Poppins',sans-serif;}
+
+  /* ===== FACILITIES (icon cards) ===== */
+  .facility-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;}
+  .fac-card{background:var(--paper);border-radius:14px;padding:26px 14px;text-align:center;box-shadow:0 8px 22px rgba(13,44,92,.06);border-bottom:3px solid transparent;transition:.25s;}
+  .fac-card:hover{border-bottom-color:var(--gold);transform:translateY(-4px);}
+  .fac-icon{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--navy-dark));display:flex;align-items:center;justify-content:center;margin:0 auto 14px;}
+  .fac-icon svg{width:26px;height:26px;fill:var(--gold);}
+  .fac-card .u{font-size:15px;color:var(--navy);font-weight:700;}
+
+  /* ===== WHY STRIP ===== */
+  .why{background:var(--navy);color:#fff;}
+  .why .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;padding:50px 20px;}
+  .why .item{text-align:center;}
+  .why .item .num{font-family:'Poppins',sans-serif;font-weight:800;font-size:15px;color:var(--gold);margin-bottom:10px;letter-spacing:1px;}
+  .why .item p{font-size:15.5px;color:#e4ecfb;}
+
+  /* ===== CONTACT ===== */
+  .contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+  .contact-card{background:var(--paper);border-radius:18px;padding:36px;box-shadow:0 10px 30px rgba(13,44,92,.08);}
+  .contact-card h3{color:var(--navy);font-size:22px;margin-bottom:22px;}
+  .c-row{display:flex;align-items:flex-start;gap:14px;margin-bottom:20px;}
+  .c-row .ic{width:42px;height:42px;flex:none;border-radius:10px;background:#eaf0fc;display:flex;align-items:center;justify-content:center;}
+  .c-row .ic svg{width:20px;height:20px;fill:var(--navy);}
+  .c-row .t b{display:block;color:var(--navy);font-size:14.5px;font-family:'Poppins',sans-serif;}
+  .c-row .t span, .c-row .t a{color:var(--muted);font-size:14.5px;}
+  .map-box{border-radius:18px;overflow:hidden;box-shadow:0 10px 30px rgba(13,44,92,.08);height:100%;min-height:320px;position:relative;}
+  .map-box iframe{width:100%;height:100%;border:0;min-height:320px;}
+  .map-cta{position:absolute;bottom:16px;left:16px;right:16px;background:var(--red);color:#fff;text-align:center;padding:13px;border-radius:10px;font-weight:700;box-shadow:0 8px 20px rgba(0,0,0,.25);}
+
+  .yt-strip{background:var(--red);}
+  .yt-strip .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;padding:26px 20px;color:#fff;}
+  .yt-strip .l{display:flex;align-items:center;gap:14px;}
+  .yt-strip .l svg{width:34px;height:34px;fill:#fff;}
+  .yt-strip h4{font-size:17px;}
+  .yt-strip p{font-size:13px;opacity:.9;font-family:'Poppins',sans-serif;}
+  .yt-btn{background:#fff;color:var(--red);font-weight:700;padding:11px 24px;border-radius:30px;font-family:'Poppins',sans-serif;font-size:14px;}
+
+  /* ===== FOOTER ===== */
+  footer{background:var(--navy-dark);color:#c9d6ee;padding:50px 0 20px;}
+  .foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px;padding-bottom:34px;border-bottom:1px solid rgba(255,255,255,.1);}
+  .foot-brand{display:flex;gap:12px;align-items:center;margin-bottom:14px;}
+  .foot-brand img{width:50px;height:50px;border-radius:50%;}
+  .foot-brand b{color:#fff;font-size:17px;font-family:'Poppins',sans-serif;}
+  footer p.small{font-size:13.5px;line-height:1.9;color:#9fb1d6;font-family:'Noto Naskh Arabic',serif;}
+  footer h5{color:#fff;margin-bottom:16px;font-size:15px;font-family:'Poppins',sans-serif;}
+  footer ul li{margin-bottom:10px;font-size:14px;}
+  footer ul li a:hover{color:var(--gold);}
+  .foot-bottom{text-align:center;padding-top:18px;font-size:13px;color:#7f92b8;font-family:'Poppins',sans-serif;}
+
+  .wa-float{position:fixed;bottom:22px;left:22px;background:var(--green);width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(28,138,78,.5);z-index:60;}
+  .wa-float svg{width:28px;height:28px;fill:#fff;}
+
+  /* ===== ANNOUNCEMENT BAR (continuous scrolling loop) ===== */
+  .marquee-bar{background:var(--green);color:#fff;overflow:hidden;position:relative;padding:7px 0;}
+  .marquee-track{display:flex;align-items:center;width:max-content;animation:marqueeScroll 12s linear infinite;}
+  .marquee-track span{display:inline-flex;align-items:center;gap:10px;padding:0 32px;font-size:15px;font-weight:600;font-family:'Noto Nastaliq Urdu',serif;white-space:nowrap;}
+  .marquee-track span svg{width:16px;height:16px;fill:var(--gold);flex:none;}
+  .marquee-track .sep{margin:0 22px;color:var(--gold);font-weight:700;}
+  .marquee-bar:hover .marquee-track{animation-play-state:paused;}
+  @keyframes marqueeScroll{
+    0%{transform:translateX(100%);}
+    100%{transform:translateX(-100%);}
+  }
+  @media(prefers-reduced-motion:reduce){.marquee-track{animation:none;flex-wrap:wrap;justify-content:center;width:100%;}}
+
+  /* ===== ABOUT US ===== */
+  .about{background:var(--paper);}
+  .about .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:50px;align-items:center;}
+  .about-media{position:relative;border-radius:20px;overflow:hidden;box-shadow:0 20px 45px rgba(13,44,92,.15);}
+  .about-media img{width:100%;aspect-ratio:4/3;object-fit:cover;}
+  .about-badges{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px;}
+  .a-badge{display:flex;align-items:center;gap:12px;background:#f3f6fb;border-radius:12px;padding:14px;}
+  .a-badge .ic{width:38px;height:38px;flex:none;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;}
+  .a-badge .ic svg{width:18px;height:18px;fill:var(--gold);}
+  .a-badge span{font-size:13.5px;color:var(--navy);font-weight:700;line-height:1.5;}
+  .about h2{font-size:30px;color:var(--navy);}
+  .about h2 em{font-style:normal;color:var(--red);}
+  .about p.lead{color:var(--muted);font-family:'Noto Naskh Arabic',serif;font-size:16px;line-height:2;margin:16px 0 6px;}
+
+  /* ===== STATS STRIP ===== */
+  .stats{background:linear-gradient(120deg,var(--navy),var(--navy-dark));}
+  .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:44px 20px;text-align:center;}
+  .stats .n{font-family:'Poppins',sans-serif;font-weight:800;font-size:32px;color:var(--gold);}
+  .stats .l{color:#cfe0ff;font-size:14px;margin-top:6px;font-family:'Noto Naskh Arabic',serif;}
+
+  /* ===== TESTIMONIALS ===== */
+  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .testi-card{background:var(--paper);border-radius:16px;padding:28px 24px;box-shadow:0 10px 28px rgba(13,44,92,.08);position:relative;border-top:4px solid var(--gold);}
+  .stars{display:flex;gap:4px;margin-bottom:14px;}
+  .stars svg{width:16px;height:16px;fill:var(--gold);}
+  .testi-card p{font-family:'Noto Naskh Arabic',serif;font-size:15px;color:var(--ink);line-height:1.9;min-height:100px;}
+  .testi-who{display:flex;align-items:center;gap:12px;margin-top:18px;padding-top:16px;border-top:1px dashed #e2e8f4;}
+  .testi-avatar{width:42px;height:42px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:'Poppins',sans-serif;flex:none;}
+  .testi-who b{display:block;color:var(--navy);font-size:14.5px;font-family:'Poppins',sans-serif;}
+  .testi-who span{color:var(--muted);font-size:12.5px;}
+
+  /* ===== RESPONSIVE ===== */
+  @media(max-width:980px){
+    .hero .wrap{grid-template-columns:1fr;padding-top:36px;}
+    .hero h1{font-size:32px;}
+    .treat-grid{grid-template-columns:repeat(2,1fr);}
+    .facility-grid{grid-template-columns:repeat(2,1fr);}
+    .why .wrap{grid-template-columns:repeat(2,1fr);}
+    .contact .wrap{grid-template-columns:1fr;}
+    .foot-grid{grid-template-columns:1fr;gap:26px;}
+    .about .wrap{grid-template-columns:1fr;}
+    .about-media img{aspect-ratio:16/9;}
+    .stats .wrap{grid-template-columns:repeat(2,1fr);}
+    .testi-grid{grid-template-columns:1fr;}
+  }
+  @media(max-width:760px){
+    .topbar .info{width:100%;justify-content:space-between;font-size:12px;gap:10px;}
+    .topbar .info span{gap:4px;}
+    .section{padding:50px 0;}
+    .section-head h2{font-size:26px;}
+    .hero h1{font-size:28px;}
+    .hero p.desc{font-size:15px;}
+    .hero-cta{flex-direction:column;align-items:stretch;}
+    .btn{justify-content:center;}
+    .timing-strip{flex-direction:column;gap:12px;}
+    .about-badges{grid-template-columns:1fr 1fr;}
+  }
+  @media(max-width:600px){
+    .treat-grid{grid-template-columns:1fr;}
+    .facility-grid{grid-template-columns:1fr 1fr;}
+    .why .wrap{grid-template-columns:1fr;gap:22px;padding:36px 20px;}
+    .stats .wrap{grid-template-columns:1fr 1fr;padding:32px 20px;}
+    .stats .n{font-size:26px;}
+    .yt-strip .wrap{flex-direction:column;text-align:center;}
+    .map-box{min-height:260px;}
+    .map-box iframe{min-height:260px;}
+  }
+  @media(max-width:520px){
+    header.main .wrap{padding:8px 10px;gap:8px;}
+    .brand{gap:8px;}
+    .brand img{width:42px;height:42px;}
+    .brand-text .eng-name{font-size:13px;}
+    .brand-text .sub{font-size:10px;}
+    .call-btn span{display:none;}
+    .call-btn{padding:11px;border-radius:50%;}
+    .hamburger{padding:6px;}
+    .hamburger span{width:20px;}
+    .topbar .wrap{padding:8px 14px;}
+    .topbar .info span:last-child{display:none;}
+    .badge{font-size:11px;padding:5px 12px;}
+    .hero h1{font-size:24px;}
+    .about-badges{grid-template-columns:1fr;}
+    .foot-brand{flex-wrap:wrap;}
+    .stats .wrap{grid-template-columns:repeat(4,1fr);gap:8px;padding:28px 10px;}
+    .stats .n{font-size:17px;}
+    .stats .l{font-size:9.5px;line-height:1.3;}
+  }
+  @media(max-width:420px){
+    .wrap{padding:0 14px;}
+    .badge{white-space:normal;text-align:center;}
+    .marquee-track span{padding:0 24px;font-size:13px;}
+    header.main .wrap{padding:7px 8px;gap:6px;}
+    .brand{gap:6px;}
+    .brand img{width:38px;height:38px;}
+    .brand-text .eng-name{font-size:12px;}
+    .brand-text .sub{font-size:9px;letter-spacing:.5px;}
+    .call-btn{padding:9px;}
+    .call-btn svg{width:14px;height:14px;}
+    .hamburger{padding:5px;gap:4px;}
+    .hamburger span{width:18px;}
+    .stats .wrap{gap:7px;padding:26px 10px;}
+    .stats .n{font-size:16px;}
+    .stats .l{font-size:9px;}
+  }
+  @media(max-width:380px){
+    .facility-grid{grid-template-columns:1fr;}
+    .hero h1{font-size:21px;}
+    .stats .wrap{grid-template-columns:repeat(4,1fr);gap:5px;padding:22px 6px;}
+    .stats .n{font-size:14px;}
+    .stats .l{font-size:8px;}
+    .testi-avatar{width:36px;height:36px;font-size:13px;}
+    header.main .wrap{padding:6px 6px;gap:4px;}
+    .brand{gap:4px;}
+    .brand img{width:34px;height:34px;}
+    .brand-text .eng-name{font-size:11px;}
+    .brand-text .sub{font-size:8px;}
+    .call-btn{padding:8px;}
+    .call-btn svg{width:13px;height:13px;}
+    .hamburger{padding:4px;}
+    .hamburger span{width:16px;}
+  }
+
+  /* ===== MAIN NAV (added for multi-page split) ===== */
+  header.main .wrap{position:relative;flex-wrap:nowrap;}
+  .main-nav{display:flex;gap:30px;align-items:center;}
+  .main-nav a{font-weight:600;color:var(--navy);font-size:15.5px;padding:6px 2px;position:relative;font-family:'Poppins',sans-serif;}
+  .main-nav a::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:2px;background:var(--red);transform:scaleX(0);transition:.25s;}
+  .main-nav a:hover::after{transform:scaleX(1);}
+  .main-nav a.active{color:var(--red);}
+  .main-nav a.active::after{transform:scaleX(1);}
+  .nav-toggle{display:none;}
+  .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;}
+  .hamburger span{width:24px;height:2px;background:var(--navy);border-radius:2px;}
+  @media(max-width:900px){
+    .main-nav{position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;align-items:flex-start;padding:18px 20px;gap:14px;box-shadow:0 12px 24px rgba(13,44,92,.12);display:none;border-radius:0 0 14px 14px;}
+    .nav-toggle:checked ~ .main-nav{display:flex;}
+    .hamburger{display:flex;order:2;}
+    .call-btn{display:none;}
+    .brand{order:1;}
+  }
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="info">
+      <span class="eng"><svg viewBox="0 0 24 24"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg> Near Govt. Boys High School, Pindi Said Pur</span>
+      <span class="eng"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.4 21 3 13.6 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.2 1L6.6 10.8z"/></svg> 03455264876 · 03009783697</span>
+    </div>
+    <div class="social">
+      <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 22v-8h2.7l.4-3.1h-3.1V9c0-.9.2-1.5 1.6-1.5H16V4.7C15.7 4.6 14.7 4.5 13.6 4.5c-2.4 0-4 1.5-4 4.2v2.2H7v3.1h2.6V22h3.9z"/></svg></a>
+      <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c2.7 0 3 0 4 .1 1 .1 1.7.2 2.3.5.6.2 1.1.6 1.6 1.1.5.5.8.9 1.1 1.6.3.6.4 1.3.5 2.3.1 1 .1 1.3.1 4s0 3-.1 4c-.1 1-.2 1.7-.5 2.3-.2.6-.6 1.1-1.1 1.6-.5.5-.9.8-1.6 1.1-.6.3-1.3.4-2.3.5-1 .1-1.3.1-4 .1s-3 0-4-.1c-1-.1-1.7-.2-2.3-.5-.6-.2-1.1-.6-1.6-1.1-.5-.5-.8-.9-1.1-1.6-.3-.6-.4-1.3-.5-2.3-.1-1-.1-1.3-.1-4s0-3 .1-4c.1-1 .2-1.7.5-2.3.2-.6.6-1.1 1.1-1.6.5-.5.9-.8 1.6-1.1.6-.3 1.3-.4 2.3-.5 1-.1 1.3-.1 4-.1zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.3a3.3 3.3 0 1 1 0-6.6 3.3 3.3 0 0 1 0 6.6zm5.2-8.5a1.2 1.2 0 1 1 0-2.4 1.2 1.2 0 0 1 0 2.4z"/></svg></a>
+      <a href="https://youtube.com/channel/UChO8ztWQfPl3g_q_-IunqEA?si=il41aZiFRcnMJmyt" target="_blank" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23 12s0-3.6-.5-5.3c-.3-1-1-1.7-2-2C18.8 4.2 12 4.2 12 4.2s-6.8 0-8.5.5c-1 .3-1.7 1-2 2C1 8.4 1 12 1 12s0 3.6.5 5.3c.3 1 1 1.7 2 2 1.7.5 8.5.5 8.5.5s6.8 0 8.5-.5c1-.3 1.7-1 2-2 .5-1.7.5-5.3.5-5.3zM9.8 15.5V8.5l6 3.5-6 3.5z"/></svg></a>
+      <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M16.6 2h-3.2v13.6c0 1.4-1.1 2.5-2.5 2.5s-2.5-1.1-2.5-2.5 1.1-2.5 2.5-2.5c.3 0 .5 0 .8.1V9.9c-.3 0-.5-.1-.8-.1-3 0-5.4 2.4-5.4 5.4S8 20.6 11 20.6s5.4-2.4 5.4-5.4V8.4c1.2.9 2.7 1.4 4.3 1.4V6.6c-2.3 0-4.1-1.9-4.1-4.2V2z"/></svg></a>
+    </div>
+  </div>
+</div>
+<!-- MARQUEE / ANNOUNCEMENT BAR -->
+<div class="marquee-bar">
+  <div class="marquee-track">
+    <span class="urdu-head"><svg viewBox="0 0 24 24"><path d="M12 2 2 7v2h20V7L12 2zM4 11v7H2v2h20v-2h-2v-7h-2v7H8v-7H6v7H4v-7z"/></svg> ہر ماہ کے پہلے اتوار کو فری چیک اپ کی سہولت <span class="sep">•</span> مستحق افراد کے لیے مفت سہولت</span>
+  </div>
+</div>
+<!-- HEADER -->
+<header class="main">
+  <div class="wrap">
+    <div class="brand">
+      <img src="images/logo.jpeg" alt="Talha Clinic Logo">
+      <div class="brand-text">
+        <div class="eng-name">Talha Clinic &amp; Pharmacy</div>
+        <div class="sub">PINDI · SAID PUR</div>
+      </div>
+    </div>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="hamburger" aria-label="Menu"><span></span><span></span><span></span></label>
+
+    <nav class="main-nav eng">
+      <a href="index.html" class="">Home</a>
+      <a href="about.html" class="">About Us</a>
+      <a href="services.html" class="">Services</a>
+      <a href="contact.html" class="active">Contact Us</a>
+    </nav>
+
+    <a href="tel:03455264876" class="call-btn eng">
+      <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.4 21 3 13.6 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.2 1L6.6 10.8z"/></svg>
+      <span>03455264876</span>
+    </a>
+  </div>
+</header>
+<section class="section contact" id="contact">
+  <div class="wrap">
+    <div>
+      <div class="section-head" style="text-align:right;margin-bottom:26px;">
+        <div class="eyebrow">GET IN TOUCH</div>
+        <h2 class="urdu-head">ہم سے <em>رابطہ کریں</em></h2>
+      </div>
+      <div class="contact-card">
+        <div class="c-row">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg></div>
+          <div class="t"><b class="eng">Address</b><span>نزد گورنمنٹ بوائز ہائی سکول، پنڈی سیدپور</span></div>
+        </div>
+        <div class="c-row">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.4 21 3 13.6 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.2 1L6.6 10.8z"/></svg></div>
+          <div class="t"><b class="eng">Phone</b><a href="tel:03455264876">03455264876</a> · <a href="tel:03009783697">03009783697</a></div>
+        </div>
+        <div class="c-row">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M2 4h20v16H2V4zm2 2v.01L12 12l8-5.99V6H4zm16 12V8.24l-8 6-8-6V18h16z"/></svg></div>
+          <div class="t"><b class="eng">Email</b><a href="mailto:talhaclinicandpharmacy@gmail.com">talhaclinicandpharmacy@gmail.com</a></div>
+        </div>
+        <div class="c-row">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.6 4 2.4-.8 1.3-4.7-2.8V6.5h1.5v6.1z"/></svg></div>
+          <div class="t"><b class="eng">Working Hours</b><span>روزانہ صبح 08:00 بجے سے رات 11:00 بجے تک</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="map-box">
+      <iframe src="https://maps.google.com/maps?q=Talha%20Clinic%20%26%20Pharmacy%20Pindi%20Said%20Pur&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen loading="lazy"></iframe>
+      <a href="https://maps.app.goo.gl/zHy3gr1EhVeh2dsbA?g_st=aw" target="_blank" class="map-cta eng">Open in Google Maps →</a>
+    </div>
+  </div>
+</section>
+
+<div class="yt-strip">
+  <div class="wrap">
+    <div class="l">
+      <svg viewBox="0 0 24 24"><path d="M23 12s0-3.6-.5-5.3c-.3-1-1-1.7-2-2C18.8 4.2 12 4.2 12 4.2s-6.8 0-8.5.5c-1 .3-1.7 1-2 2C1 8.4 1 12 1 12s0 3.6.5 5.3c.3 1 1 1.7 2 2 1.7.5 8.5.5 8.5.5s6.8 0 8.5-.5c1-.3 1.7-1 2-2 .5-1.7.5-5.3.5-5.3zM9.8 15.5V8.5l6 3.5-6 3.5z"/></svg>
+      <div><h4 class="urdu-head">ہمارا یوٹیوب چینل ملاحظہ کریں</h4><p>Health tips &amp; clinic updates</p></div>
+    </div>
+    <a href="https://youtube.com/channel/UChO8ztWQfPl3g_q_-IunqEA?si=il41aZiFRcnMJmyt" target="_blank" class="yt-btn">Subscribe</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img src="images/logo.jpeg" alt="logo"><b>Talha Clinic &amp; Pharmacy</b></div>
+        <p class="small">معیاری علاج، جدید سہولیات اور بہترین توجہ کے ساتھ، پنڈی سیدپور میں ایک قابلِ اعتماد کلینک اینڈ فارمیسی۔ اب آپ کو شہر جانے کی ضرورت نہیں۔</p>
+      </div>
+      <div>
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="about.html">ہمارے بارے میں</a></li>
+          <li><a href="services.html#treatments">علاج کی سہولیات</a></li>
+          <li><a href="services.html#facilities">طبی سہولیات</a></li>
+          <li><a href="about.html#feedback">مریضوں کی رائے</a></li>
+          <li><a href="contact.html">رابطہ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li>📞 03455264876 · 03009783697</li>
+          <li>✉️ talhaclinicandpharmacy@gmail.com</li>
+          <li>📍 Near Govt. Boys High School, Pindi Said Pur</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">© 2026 Talha Clinic &amp; Pharmacy · All Rights Reserved. Reg. No. PHC/R&amp;L2025/83974</div>
+  </div>
+</footer>
+<a href="https://wa.me/923455264876" target="_blank" class="wa-float" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.7.8-.8 1-.2.2-.3.2-.5.1-.2-.1-1-.4-2-1.2-.7-.6-1.2-1.4-1.4-1.6-.2-.2 0-.4.1-.5.1-.1.2-.3.4-.4.1-.1.2-.2.2-.4.1-.2 0-.3 0-.4 0-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
+</a>
+
+</body>
+</html>
