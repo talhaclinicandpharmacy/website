@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ur" dir="rtl">
+<html lang="ur" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,7 +40,7 @@
 
   /* ===== TOP BAR ===== */
   .topbar{background:var(--navy-dark);color:#cfe0ff;font-size:13px;}
-  .topbar .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;padding:6px 20px;}
+  .topbar .wrap{max-width:100%;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;padding:6px 25px;}
   .topbar .info{display:flex;flex-wrap:wrap;gap:18px;align-items:center;}
   .topbar .info span{display:flex;align-items:center;gap:6px;}
   .topbar .social{display:flex;gap:10px;}
@@ -50,12 +50,13 @@
 
   /* ===== HEADER ===== */
   header.main{background:var(--paper);position:sticky;top:0;z-index:50;box-shadow:0 2px 14px rgba(13,44,92,.08);}
-  header.main .wrap{display:flex;align-items:center;justify-content:space-between;padding:9px 20px;gap:16px;}
+  header.main .wrap{max-width:100%;display:flex;align-items:center;justify-content:space-between;padding:9px 25px;gap:16px;}
   .brand{display:flex;align-items:center;gap:12px;}
   .brand img{width:58px;height:58px;border-radius:50%;object-fit:cover;border:2px solid var(--navy);}
   .brand-text .eng-name{font-weight:800;color:var(--navy);font-size:19px;letter-spacing:.3px;}
   .brand-text .sub{color:var(--red);font-weight:600;font-size:12.5px;letter-spacing:1px;}
-  .call-btn{background:var(--red);color:#fff;font-weight:700;padding:11px 22px;border-radius:40px;display:flex;align-items:center;gap:8px;font-size:15px;box-shadow:0 6px 16px rgba(200,30,44,.35);white-space:nowrap;}
+  .call-btn{background:linear-gradient(135deg,var(--red),var(--red-dark));color:#fff;font-weight:700;padding:11px 22px;border-radius:40px;display:flex;align-items:center;gap:8px;font-size:15px;box-shadow:0 6px 16px rgba(200,30,44,.4);white-space:nowrap;transition:.25s;}
+  .call-btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(200,30,44,.5);}
   .call-btn svg{width:17px;height:17px;fill:#fff;}
 
   /* ===== HERO ===== */
@@ -80,6 +81,11 @@
     display:block;
     border-radius:0;
     margin:0;
+    object-fit:cover;
+  }
+  @media(max-width:760px){
+    .hero-banner-wrap{max-height:none;}
+    .hero-banner-img{width:100%;height:auto;}
   }
   .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);padding:6px 16px;border-radius:30px;font-size:12.5px;letter-spacing:.5px;color:var(--gold);font-weight:600;margin-bottom:22px;}
   .hero h1{font-size:44px;color:#fff;margin-bottom:6px;}
@@ -119,9 +125,12 @@
   .treat-body{padding:16px 16px 20px;text-align:center;}
   .treat-body .u{font-size:16px;color:var(--navy);}
   .treat-body .e{font-size:11.5px;color:var(--muted);letter-spacing:.5px;text-transform:uppercase;margin-top:4px;font-family:'Poppins',sans-serif;}
+  .treat-book-btn{display:flex;align-items:center;justify-content:center;gap:7px;margin-top:14px;background:linear-gradient(135deg,var(--red),var(--red-dark));color:#fff;font-weight:700;font-size:13px;padding:10px 14px;border-radius:30px;font-family:'Poppins',sans-serif;box-shadow:0 6px 14px rgba(200,30,44,.35);transition:.25s;}
+  .treat-book-btn:hover{background:var(--red-dark);transform:translateY(-2px);box-shadow:0 10px 20px rgba(200,30,44,.45);}
+  .treat-book-btn svg{width:16px;height:16px;fill:#fff;flex-shrink:0;}
 
   /* ===== FACILITIES (icon cards) ===== */
-  .facility-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;}
+  .facility-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
   .fac-card{background:var(--paper);border-radius:14px;padding:26px 14px;text-align:center;box-shadow:0 8px 22px rgba(13,44,92,.06);border-bottom:3px solid transparent;transition:.25s;}
   .fac-card:hover{border-bottom-color:var(--gold);transform:translateY(-4px);}
   .fac-icon{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--navy-dark));display:flex;align-items:center;justify-content:center;margin:0 auto 14px;}
@@ -136,13 +145,15 @@
   .why .item p{font-size:15.5px;color:#e4ecfb;}
 
   /* ===== CONTACT ===== */
-  .contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+  .contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;min-width:0;}
+  .contact .wrap>*{min-width:0;}
   .contact-card{background:var(--paper);border-radius:18px;padding:36px;box-shadow:0 10px 30px rgba(13,44,92,.08);}
   .contact-card h3{color:var(--navy);font-size:22px;margin-bottom:22px;}
   .c-row{display:flex;align-items:flex-start;gap:14px;margin-bottom:20px;}
   .c-row .ic{width:42px;height:42px;flex:none;border-radius:10px;background:#eaf0fc;display:flex;align-items:center;justify-content:center;}
   .c-row .ic svg{width:20px;height:20px;fill:var(--navy);}
   .c-row .t b{display:block;color:var(--navy);font-size:14.5px;font-family:'Poppins',sans-serif;}
+  .c-row .t, .c-row .t span, .c-row .t a{overflow-wrap:anywhere;word-break:break-word;}
   .c-row .t span, .c-row .t a{color:var(--muted);font-size:14.5px;}
   .map-box{border-radius:18px;overflow:hidden;box-shadow:0 10px 30px rgba(13,44,92,.08);height:100%;min-height:320px;position:relative;}
   .map-box iframe{width:100%;height:100%;border:0;min-height:320px;}
@@ -168,19 +179,23 @@
   footer ul li a:hover{color:var(--gold);}
   .foot-bottom{text-align:center;padding-top:18px;font-size:13px;color:#7f92b8;font-family:'Poppins',sans-serif;}
 
-  .wa-float{position:fixed;bottom:22px;left:22px;background:var(--green);width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(28,138,78,.5);z-index:60;}
+  .wa-float{position:fixed;bottom:22px;right:22px;background:var(--green);width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(28,138,78,.5);z-index:999;}
   .wa-float svg{width:28px;height:28px;fill:#fff;}
+  @media(max-width:520px){
+    .wa-float{width:50px;height:50px;bottom:calc(16px + env(safe-area-inset-bottom));right:16px;}
+    .wa-float svg{width:24px;height:24px;}
+  }
 
-  /* ===== ANNOUNCEMENT BAR (continuous scrolling loop) ===== */
-  .marquee-bar{background:var(--green);color:#fff;overflow:hidden;position:relative;padding:7px 0;}
-  .marquee-track{display:flex;align-items:center;width:max-content;animation:marqueeScroll 12s linear infinite;}
-  .marquee-track span{display:inline-flex;align-items:center;gap:10px;padding:0 32px;font-size:15px;font-weight:600;font-family:'Noto Nastaliq Urdu',serif;white-space:nowrap;}
+  /* ===== ANNOUNCEMENT BAR (continuous scrolling loop, seamless) ===== */
+  .marquee-bar{background:var(--green);color:#fff;overflow:hidden;position:relative;padding:5px 0;}
+  .marquee-track{display:flex;align-items:center;width:max-content;animation:marqueeScroll 26s linear infinite;}
+  .marquee-track span.urdu-head{display:inline-flex;align-items:center;padding:0 20px;font-size:14px;font-weight:600;font-family:'Noto Nastaliq Urdu',serif;white-space:nowrap;letter-spacing:.3px;word-spacing:14px;}
   .marquee-track span svg{width:16px;height:16px;fill:var(--gold);flex:none;}
-  .marquee-track .sep{margin:0 22px;color:var(--gold);font-weight:700;}
+  .marquee-track .sep{margin:0 34px;color:var(--gold);font-weight:700;}
   .marquee-bar:hover .marquee-track{animation-play-state:paused;}
   @keyframes marqueeScroll{
-    0%{transform:translateX(100%);}
-    100%{transform:translateX(-100%);}
+    0%{transform:translateX(0);}
+    100%{transform:translateX(-50%);}
   }
   @media(prefers-reduced-motion:reduce){.marquee-track{animation:none;flex-wrap:wrap;justify-content:center;width:100%;}}
 
@@ -188,7 +203,7 @@
   .about{background:var(--paper);}
   .about .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:50px;align-items:center;}
   .about-media{position:relative;border-radius:20px;overflow:hidden;box-shadow:0 20px 45px rgba(13,44,92,.15);}
-  .about-media img{width:100%;aspect-ratio:4/3;object-fit:cover;}
+  .about-media img,.about-media video{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;}
   .about-badges{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px;}
   .a-badge{display:flex;align-items:center;gap:12px;background:#f3f6fb;border-radius:12px;padding:14px;}
   .a-badge .ic{width:38px;height:38px;flex:none;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;}
@@ -200,20 +215,38 @@
 
   /* ===== STATS STRIP ===== */
   .stats{background:linear-gradient(120deg,var(--navy),var(--navy-dark));}
-  .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:44px 20px;text-align:center;}
-  .stats .n{font-family:'Poppins',sans-serif;font-weight:800;font-size:32px;color:var(--gold);}
-  .stats .l{color:#cfe0ff;font-size:14px;margin-top:6px;font-family:'Noto Naskh Arabic',serif;}
+  .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:26px 20px;text-align:center;}
+  .stats .n{font-family:'Poppins',sans-serif;font-weight:800;font-size:24px;color:var(--gold);}
+  .stats .l{color:#cfe0ff;font-size:13px;margin-top:4px;font-family:'Noto Naskh Arabic',serif;}
 
   /* ===== TESTIMONIALS ===== */
-  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-  .testi-card{background:var(--paper);border-radius:16px;padding:28px 24px;box-shadow:0 10px 28px rgba(13,44,92,.08);position:relative;border-top:4px solid var(--gold);}
-  .stars{display:flex;gap:4px;margin-bottom:14px;}
-  .stars svg{width:16px;height:16px;fill:var(--gold);}
-  .testi-card p{font-family:'Noto Naskh Arabic',serif;font-size:15px;color:var(--ink);line-height:1.9;min-height:100px;}
-  .testi-who{display:flex;align-items:center;gap:12px;margin-top:18px;padding-top:16px;border-top:1px dashed #e2e8f4;}
-  .testi-avatar{width:42px;height:42px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:'Poppins',sans-serif;flex:none;}
+  #feedback{background:linear-gradient(180deg,#eef3fb 0%,var(--bg) 100%);position:relative;overflow:hidden;}
+  #feedback::before{content:"";position:absolute;top:-120px;right:-120px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(240,165,44,.16),transparent 70%);}
+  #feedback::after{content:"";position:absolute;bottom:-140px;left:-140px;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(13,44,92,.10),transparent 70%);}
+  .rating-strip{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;background:var(--paper);border:1px solid #e2e8f4;border-radius:100px;padding:12px 26px;max-width:max-content;margin:0 auto 40px;box-shadow:0 10px 28px rgba(13,44,92,.07);}
+  .rating-strip .g-mark{width:26px;height:26px;flex:none;}
+  .rating-strip .r-score{font-family:'Poppins',sans-serif;font-weight:800;color:var(--navy);font-size:18px;}
+  .rating-strip .r-stars{display:flex;gap:2px;}
+  .rating-strip .r-stars svg{width:15px;height:15px;fill:var(--gold);}
+  .rating-strip .r-text{font-family:'Poppins',sans-serif;color:var(--muted);font-size:13.5px;}
+  .rating-strip .r-div{width:1px;height:18px;background:#e2e8f4;}
+  .testi-grid{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .testi-card{background:var(--paper);border-radius:18px;padding:26px 24px 22px;box-shadow:0 10px 28px rgba(13,44,92,.08);position:relative;border:1px solid #e9eefb;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;}
+  .testi-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(13,44,92,.14);border-color:var(--gold);}
+  .testi-card::before{content:"";position:absolute;top:0;left:24px;right:24px;height:3px;border-radius:0 0 4px 4px;background:linear-gradient(90deg,var(--navy),var(--gold),var(--red));}
+  .testi-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;}
+  .testi-who{display:flex;align-items:center;gap:12px;}
+  .testi-avatar{width:46px;height:46px;border-radius:50%;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;font-family:'Poppins',sans-serif;flex:none;box-shadow:0 4px 10px rgba(0,0,0,.12);}
+  .testi-avatar.c-navy{background:linear-gradient(135deg,var(--navy),var(--navy-dark));}
+  .testi-avatar.c-red{background:linear-gradient(135deg,var(--red),var(--red-dark));}
+  .testi-avatar.c-gold{background:linear-gradient(135deg,#f6bd5a,var(--gold));}
   .testi-who b{display:block;color:var(--navy);font-size:14.5px;font-family:'Poppins',sans-serif;}
-  .testi-who span{color:var(--muted);font-size:12.5px;}
+  .testi-who span{color:var(--muted);font-size:12px;}
+  .g-badge{width:20px;height:20px;flex:none;margin-top:2px;}
+  .stars{display:flex;gap:3px;margin:16px 0 12px;}
+  .stars svg{width:15px;height:15px;fill:var(--gold);}
+  .testi-card p{font-family:'Noto Naskh Arabic',serif;font-size:14.5px;color:var(--ink);line-height:1.85;min-height:96px;}
+  .quote-mark{position:absolute;top:18px;right:20px;font-family:Georgia,serif;font-size:54px;line-height:1;color:var(--gold);opacity:.18;font-weight:700;pointer-events:none;}
 
   /* ===== RESPONSIVE ===== */
   @media(max-width:980px){
@@ -225,13 +258,17 @@
     .contact .wrap{grid-template-columns:1fr;}
     .foot-grid{grid-template-columns:1fr;gap:26px;}
     .about .wrap{grid-template-columns:1fr;}
-    .about-media img{aspect-ratio:16/9;}
+    .about-media img,.about-media video{aspect-ratio:16/9;}
     .stats .wrap{grid-template-columns:repeat(2,1fr);}
     .testi-grid{grid-template-columns:1fr;}
   }
   @media(max-width:760px){
-    .topbar .info{width:100%;justify-content:space-between;font-size:12px;gap:10px;}
-    .topbar .info span{gap:4px;}
+    .topbar .wrap{flex-wrap:nowrap;justify-content:space-between;}
+    .topbar .info{width:auto;flex:1;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;justify-content:flex-start;font-size:11.5px;gap:14px;min-width:0;}
+    .topbar .info::-webkit-scrollbar{display:none;}
+    .topbar .info span{gap:4px;white-space:nowrap;flex:none;}
+    .topbar .phone-info{display:none;}
+    .topbar .social{flex:none;}
     .section{padding:50px 0;}
     .section-head h2{font-size:26px;}
     .hero h1{font-size:28px;}
@@ -245,8 +282,8 @@
     .treat-grid{grid-template-columns:1fr;}
     .facility-grid{grid-template-columns:1fr 1fr;}
     .why .wrap{grid-template-columns:1fr;gap:22px;padding:36px 20px;}
-    .stats .wrap{grid-template-columns:repeat(4,1fr);gap:10px;padding:30px 14px;}
-    .stats .n{font-size:19px;}
+    .stats .wrap{grid-template-columns:repeat(4,1fr);gap:10px;padding:20px 14px;}
+    .stats .n{font-size:18px;}
     .stats .l{font-size:10.5px;line-height:1.3;}
     .yt-strip .wrap{flex-direction:column;text-align:center;}
     .map-box{min-height:260px;}
@@ -263,19 +300,19 @@
     .hamburger{padding:6px;}
     .hamburger span{width:20px;}
     .topbar .wrap{padding:8px 14px;}
-    .topbar .info span:last-child{display:none;}
     .badge{font-size:11px;padding:5px 12px;}
     .hero h1{font-size:24px;}
     .about-badges{grid-template-columns:1fr;}
     .foot-brand{flex-wrap:wrap;}
-    .stats .wrap{grid-template-columns:repeat(4,1fr);gap:8px;padding:28px 10px;}
-    .stats .n{font-size:17px;}
+    .stats .wrap{grid-template-columns:repeat(4,1fr);gap:8px;padding:18px 10px;}
+    .stats .n{font-size:16px;}
     .stats .l{font-size:9.5px;line-height:1.3;}
   }
   @media(max-width:420px){
     .wrap{padding:0 14px;}
     .badge{white-space:normal;text-align:center;}
-    .marquee-track span{padding:0 24px;font-size:13px;}
+    .marquee-track span.urdu-head{padding:0 12px;font-size:13px;}
+    .marquee-track .sep{margin:0 20px;}
     header.main .wrap{padding:7px 8px;gap:6px;}
     .brand{gap:6px;}
     .brand img{width:38px;height:38px;}
@@ -292,8 +329,8 @@
   @media(max-width:380px){
     .facility-grid{grid-template-columns:1fr;}
     .hero h1{font-size:21px;}
-    .stats .wrap{grid-template-columns:repeat(4,1fr);gap:5px;padding:22px 6px;}
-    .stats .n{font-size:14px;}
+    .stats .wrap{grid-template-columns:repeat(4,1fr);gap:5px;padding:16px 6px;}
+    .stats .n{font-size:13px;}
     .stats .l{font-size:8px;}
     .testi-avatar{width:36px;height:36px;font-size:13px;}
     header.main .wrap{padding:6px 6px;gap:4px;}
@@ -319,11 +356,12 @@
   .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;}
   .hamburger span{width:24px;height:2px;background:var(--navy);border-radius:2px;}
   @media(max-width:900px){
+    header.main .wrap{justify-content:flex-start;}
     .main-nav{position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;align-items:flex-start;padding:18px 20px;gap:14px;box-shadow:0 12px 24px rgba(13,44,92,.12);display:none;border-radius:0 0 14px 14px;}
     .nav-toggle:checked ~ .main-nav{display:flex;}
-    .hamburger{display:flex;order:2;}
-    .call-btn{display:none;}
     .brand{order:1;}
+    .call-btn{order:2;margin-left:auto;}
+    .hamburger{display:flex;order:3;margin-left:10px;}
   }
 </style>
 </head>
@@ -335,7 +373,7 @@
   <div class="wrap">
     <div class="info">
       <span class="eng"><svg viewBox="0 0 24 24"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg> Near Govt. Boys High School, Pindi Said Pur</span>
-      <span class="eng"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.4 21 3 13.6 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.2 1L6.6 10.8z"/></svg> 03455264876 · 03009783697</span>
+      <span class="eng phone-info"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.4 21 3 13.6 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.2 1L6.6 10.8z"/></svg> 03455264876 · 03009783697</span>
     </div>
     <div class="social">
       <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 22v-8h2.7l.4-3.1h-3.1V9c0-.9.2-1.5 1.6-1.5H16V4.7C15.7 4.6 14.7 4.5 13.6 4.5c-2.4 0-4 1.5-4 4.2v2.2H7v3.1h2.6V22h3.9z"/></svg></a>
@@ -348,7 +386,7 @@
 <!-- MARQUEE / ANNOUNCEMENT BAR -->
 <div class="marquee-bar">
   <div class="marquee-track">
-    <span class="urdu-head"><svg viewBox="0 0 24 24"><path d="M12 2 2 7v2h20V7L12 2zM4 11v7H2v2h20v-2h-2v-7h-2v7H8v-7H6v7H4v-7z"/></svg> ہر ماہ کے پہلے اتوار کو فری چیک اپ کی سہولت <span class="sep">•</span> مستحق افراد کے لیے مفت سہولت</span>
+    <span class="urdu-head">ہر ماہ کے پہلے اتوار کو فری چیک اپ کی سہولت <span class="sep">|</span> مستحق افراد کے لیے مفت سہولت <span class="sep">|</span> تجربہ کار ڈاکٹرز کی زیرِ نگرانی معیاری علاج</span>
   </div>
 </div>
 <!-- HEADER -->
@@ -372,15 +410,18 @@
       <a href="contact.html" class="">Contact Us</a>
     </nav>
 
-    <a href="tel:03455264876" class="call-btn eng">
-      <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.4 21 3 13.6 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.2 1L6.6 10.8z"/></svg>
+    <a href="https://wa.me/923455264876" target="_blank" rel="noopener" class="call-btn eng">
+      <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.7.8-.8 1-.2.2-.3.2-.5.1-.2-.1-1-.4-2-1.2-.7-.6-1.2-1.4-1.4-1.6-.2-.2 0-.4.1-.5.1-.1.2-.3.4-.4.1-.1.2-.2.2-.4.1-.2 0-.3 0-.4 0-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
       <span>03455264876</span>
     </a>
   </div>
 </header>
 <section class="hero">
   <div class="hero-banner-wrap">
-    <img src="images/banner.png" alt="Talha Clinic & Pharmacy" class="hero-banner-img">
+    <picture>
+      <source media="(max-width:760px)" srcset="images/mobile-banner.png">
+      <img src="images/banner.png" alt="Talha Clinic & Pharmacy" class="hero-banner-img">
+    </picture>
   </div>
 </section>
 
@@ -390,6 +431,119 @@
     <div><div class="n eng">15K+</div><div class="l">مریضوں کا علاج</div></div>
     <div><div class="n eng">7%</div><div class="l">ادویات پر رعایت</div></div>
     <div><div class="n eng">08-11</div><div class="l">روزانہ کھلا (صبح-رات)</div></div>
+  </div>
+</section>
+
+<section class="section about" id="about">
+  <div class="wrap">
+    <div class="about-media">
+      <video src="images/about-video.mp4" poster="images/babydoctor.jpeg" controls playsinline preload="metadata">
+        آپ کا براؤزر ویڈیو سپورٹ نہیں کرتا۔
+      </video>
+    </div>
+    <div>
+      <div class="eyebrow">ABOUT US</div>
+      <h2 class="urdu-head">گھر کے قریب <em>معیاری دیکھ بھال</em></h2>
+      <p class="lead">طلحہ کلینک اینڈ فارمیسی جدید سہولیات اور تجربہ کار ڈاکٹرز کو ایک ہی جگہ لے کر آیا ہے، تاکہ پنڈی سیدپور کے خاندانوں کو معیاری علاج کے لیے شہر جانے کی ضرورت نہ پڑے۔</p>
+      <div class="about-badges">
+        <div class="a-badge"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2 3 6v5c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V6l-9-4zm-1 14-4-4 1.4-1.4L11 13.2l5.6-5.6L18 9l-7 7z"/></svg></div><span>رجسٹرڈ کلینک اینڈ فارمیسی</span></div>
+        <div class="a-badge"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.6 4 2.4-.8 1.3-4.7-2.8V6.5h1.5v6.1z"/></svg></div><span>ہر ماہ فری چیک اپ کیمپ</span></div>
+        <div class="a-badge"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 13h2l1-8h12l1 8h2v2H3v-2zm3 4h2v3H6v-3zm7 0h2v3h-2v-3z"/></svg></div><span>فری ہوم میڈیسن ڈیلیوری</span></div>
+        <div class="a-badge"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2 3 6v5c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V6l-9-4zM9.5 16 6 12.5l1.4-1.4 2.1 2.1 5.1-5.1L16 9.5 9.5 16z"/></svg></div><span>ادویات پر 7% تک رعایت</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:#eaf0fb;" id="treatments">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">OUR SPECIALITIES</div>
+      <h2 class="urdu-head">مخصوص <em>علاج کی سہولیات</em></h2>
+      <p>ماہر ڈاکٹرز کی زیرِ نگرانی درج ذیل امراض کا مکمل اور معیاری علاج</p>
+    </div>
+    <div class="treat-grid">
+      <div class="treat-card"><div class="imgwrap"><img src="images/stomach.jpeg" alt="معدے کا علاج"></div><div class="treat-body"><div class="u">معدے کا علاج</div><div class="e">Stomach Treatment</div><a href="https://wa.me/923455264876?text=Assalam-o-Alaikum%2C%20I%20want%20to%20book%20an%20appointment%20for%20Stomach%20Treatment%20%28%D9%85%D8%B9%D8%AF%DB%92%20%DA%A9%D8%A7%20%D8%B9%D9%84%D8%A7%D8%AC%29." target="_blank" class="treat-book-btn eng"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.7.8-.8 1-.2.2-.3.2-.5.1-.2-.1-1-.4-2-1.2-.7-.6-1.2-1.4-1.4-1.6-.2-.2 0-.4.1-.5.1-.1.2-.3.4-.4.1-.1.2-.2.2-.4.1-.2 0-.3 0-.4 0-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>Book Appointment</a></div></div>
+
+      <div class="treat-card"><div class="imgwrap"><img src="images/ultrasound.jpeg" alt="الٹراساؤنڈ کا ڈاکٹر"></div><div class="treat-body"><div class="u">الٹراساؤنڈ کا ڈاکٹر</div><div class="e">Ultrasound Doctor</div><a href="https://wa.me/923455264876?text=Assalam-o-Alaikum%2C%20I%20want%20to%20book%20an%20appointment%20for%20Ultrasound%20Doctor%20%28%D8%A7%D9%84%D9%B9%D8%B1%D8%A7%D8%B3%D8%A7%D8%A4%D9%86%DA%88%20%DA%A9%D8%A7%20%DA%88%D8%A7%DA%A9%D9%B9%D8%B1%29." target="_blank" class="treat-book-btn eng"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.7.8-.8 1-.2.2-.3.2-.5.1-.2-.1-1-.4-2-1.2-.7-.6-1.2-1.4-1.4-1.6-.2-.2 0-.4.1-.5.1-.1.2-.3.4-.4.1-.1.2-.2.2-.4.1-.2 0-.3 0-.4 0-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>Book Appointment</a></div></div>
+
+      <div class="treat-card"><div class="imgwrap"><img src="images/babydoctor.jpeg" alt="بچوں کے ڈاکٹر"></div><div class="treat-body"><div class="u">بچوں کے ڈاکٹر</div><div class="e">Child Specialist</div><a href="https://wa.me/923455264876?text=Assalam-o-Alaikum%2C%20I%20want%20to%20book%20an%20appointment%20for%20Child%20Specialist%20%28%D8%A8%DA%86%D9%88%DA%BA%20%DA%A9%DB%92%20%DA%88%D8%A7%DA%A9%D9%B9%D8%B1%29." target="_blank" class="treat-book-btn eng"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.7.8-.8 1-.2.2-.3.2-.5.1-.2-.1-1-.4-2-1.2-.7-.6-1.2-1.4-1.4-1.6-.2-.2 0-.4.1-.5.1-.1.2-.3.4-.4.1-.1.2-.2.2-.4.1-.2 0-.3 0-.4 0-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>Book Appointment</a></div></div>
+
+      <div class="treat-card"><div class="imgwrap"><img src="images/sugar.jpeg" alt="شوگر کا علاج"></div><div class="treat-body"><div class="u">شوگر کا علاج</div><div class="e">Diabetes Treatment</div><a href="https://wa.me/923455264876?text=Assalam-o-Alaikum%2C%20I%20want%20to%20book%20an%20appointment%20for%20Diabetes%20Treatment%20%28%D8%B4%D9%88%DA%AF%D8%B1%20%DA%A9%D8%A7%20%D8%B9%D9%84%D8%A7%D8%AC%29." target="_blank" class="treat-book-btn eng"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.7.8-.8 1-.2.2-.3.2-.5.1-.2-.1-1-.4-2-1.2-.7-.6-1.2-1.4-1.4-1.6-.2-.2 0-.4.1-.5.1-.1.2-.3.4-.4.1-.1.2-.2.2-.4.1-.2 0-.3 0-.4 0-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>Book Appointment</a></div></div>
+    </div>
+    <div style="text-align:center;margin-top:34px;">
+      <a href="services.html#treatments" class="btn btn-red eng" style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--red),var(--red-dark));color:#fff;padding:12px 28px;border-radius:40px;font-weight:700;font-size:14.5px;box-shadow:0 8px 20px rgba(200,30,44,.35);transition:.25s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">تمام سہولیات دیکھیں</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="feedback">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">PATIENT FEEDBACK</div>
+      <h2 class="urdu-head">ہمارے <em>مریضوں کی رائے</em></h2>
+      <p>What Our Patients Say on Google</p>
+    </div>
+
+    <div class="rating-strip eng">
+      <svg class="g-mark" viewBox="0 0 48 48"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg>
+      <div class="r-score">5.0</div>
+      <div class="r-stars">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3 1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3 1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3 1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3 1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3 1.2-6.8-5-4.9 6.9-1z"/></svg>
+      </div>
+      <div class="r-div"></div>
+      <div class="r-text">Based on Google Reviews</div>
+    </div>
+
+    <div class="testi-grid">
+      <div class="testi-card">
+        <span class="quote-mark">"</span>
+        <div class="testi-top">
+          <div class="testi-who">
+            <div class="testi-avatar c-navy eng">ZM</div>
+            <div><b class="eng">Zain Malik</b><span class="eng">7 months ago</span></div>
+          </div>
+          <svg class="g-badge" viewBox="0 0 48 48"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg>
+        </div>
+        <div class="stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3 1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3 1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3 1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3 1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3 1.2-6.8-5-4.9 6.9-1z"/></svg>
+        </div>
+        <p class="eng">"High Quality Medicine on Discount. First Time in Pindi Said Pur, Great Staff."</p>
+      </div>
+
+      <div class="testi-card">
+        <span class="quote-mark">"</span>
+        <div class="testi-top">
+          <div class="testi-who">
+            <div class="testi-avatar c-gold eng">QS</div>
+            <div><b class="eng">Qaisar Shahzad</b><span class="eng">5 days ago</span></div>
+          </div>
+          <svg class="g-badge" viewBox="0 0 48 48"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg>
+        </div>
+        <div class="stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3 1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3 1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3 1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3 1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3 1.2-6.8-5-4.9 6.9-1z"/></svg>
+        </div>
+        <p class="eng">"Bohat behtareen sluk aur professional staff. Highly recommended."</p>
+      </div>
+
+      <div class="testi-card">
+        <span class="quote-mark">"</span>
+        <div class="testi-top">
+          <div class="testi-who">
+            <div class="testi-avatar c-red eng">AK</div>
+            <div><b class="eng">Ayesha Khan</b><span class="eng">2 weeks ago</span></div>
+          </div>
+          <svg class="g-badge" viewBox="0 0 48 48"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg>
+        </div>
+        <div class="stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3 1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3 1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3 1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3 1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3 1.2-6.8-5-4.9 6.9-1z"/></svg>
+        </div>
+        <p class="eng">"Clean clinic, caring doctors and quick checkup. My whole family comes here now."</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:34px;">
+      <a href="about.html#feedback" class="btn btn-red eng" style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--red),var(--red-dark));color:#fff;padding:12px 28px;border-radius:40px;font-weight:700;font-size:14.5px;box-shadow:0 8px 20px rgba(200,30,44,.35);transition:.25s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">مزید آراء دیکھیں</a>
+    </div>
   </div>
 </section>
 
@@ -405,10 +559,11 @@
       <div class="fac-card"><div class="fac-icon"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-9.3-10.1C1 8.2 2 4.5 5.6 3.6c2-.5 3.8.4 4.9 2C11.6 4 13.4 3.1 15.4 3.6c3.6.9 4.6 4.6 2.9 7.3C19.9 14.8 12 21 12 21z"/></svg></div><div class="u">ایمرجنسی / وارڈ</div></div>
       <div class="fac-card"><div class="fac-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16v13H5.2L4 18.6V4zm2 3v2h12V7H6zm0 4v2h8v-2H6z"/></svg></div><div class="u">الٹراساؤنڈ</div></div>
       <div class="fac-card"><div class="fac-icon"><svg viewBox="0 0 24 24"><path d="M9 2h6v6l4 8v4H5v-4l4-8V2zm2 2v4.3l-3.8 7.7h9.6L13 8.3V4h-2z"/></svg></div><div class="u">میڈیکل لیب سروسز</div></div>
+      <div class="fac-card"><div class="fac-icon"><svg viewBox="0 0 24 24"><path d="M12 2a5 5 0 0 1 5 5v2a5 5 0 0 1-10 0V7a5 5 0 0 1 5-5zm-7 17c0-3.3 3.1-6 7-6s7 2.7 7 6v1H5v-1z"/></svg></div><div class="u">تربیت یافتہ نرسنگ اسٹاف</div></div>
       <div class="fac-card"><div class="fac-icon"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3z"/></svg></div><div class="u">معیاری ادویات</div></div>
     </div>
     <div style="text-align:center;margin-top:34px;">
-      <a href="services.html#facilities" class="btn btn-outline-navy eng" style="display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--navy);color:var(--navy);padding:11px 26px;border-radius:40px;font-weight:700;font-size:14.5px;">تمام سہولیات دیکھیں</a>
+      <a href="services.html#facilities" class="btn btn-red eng" style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--red),var(--red-dark));color:#fff;padding:12px 28px;border-radius:40px;font-weight:700;font-size:14.5px;box-shadow:0 8px 20px rgba(200,30,44,.35);transition:.25s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">تمام سہولیات دیکھیں</a>
     </div>
   </div>
 </section>
@@ -455,5 +610,17 @@
   <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.7.8-.8 1-.2.2-.3.2-.5.1-.2-.1-1-.4-2-1.2-.7-.6-1.2-1.4-1.4-1.6-.2-.2 0-.4.1-.5.1-.1.2-.3.4-.4.1-.1.2-.2.2-.4.1-.2 0-.3 0-.4 0-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
 </a>
 
+<script>
+  // Seamless marquee loop: JS duplicates the announcement text at runtime
+  // so the source HTML keeps a single copy, but the ticker loops with no gap.
+  document.querySelectorAll('.marquee-track').forEach(function(track){
+    var original = track.querySelector('.urdu-head');
+    if (original) {
+      var clone = original.cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true');
+      track.appendChild(clone);
+    }
+  });
+</script>
 </body>
 </html>
